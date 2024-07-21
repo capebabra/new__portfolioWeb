@@ -1,0 +1,30 @@
+mixin skills()
+    skills.skills#skills
+        .skills__container
+            h3.containerHeading Skills
+            .container-headingSkills 
+                input(type="radio" id="soft" name="skill" checked)
+                label(for="soft").headingSkillsSoft#softSkills Soft
+                input(type="radio" id="hard" name="skill")
+                label(for="hard").headingSkillsHard#hardSkills Hard
+            .container-contentSkillsImg#contentSkillsImg
+                ul.contentSkillsImg#listSkill1
+                    li
+                        img.skillsImg#skillsImg1(src="", alt="", draggable="false")
+                    li
+                        p.skillsText#skillsText1 Active Learning
+                ul.contentSkillsImg#listSkill2
+                    li
+                        img.skillsImg#skillsImg2(src="", alt="", draggable="false")
+                    li
+                        p.skillsText#skillsText2 Adaptability
+                ul.contentSkillsImg#listSkill3
+                    li
+                        img.skillsImg#skillsImg3(src="", alt="", draggable="false")
+                    li
+                        p.skillsText#skillsText3 Critical Thinking
+                ul.contentSkillsImg#listSkill4
+                    li
+                        img.skillsImg#skillsImg4(src="", alt="", draggable="false")
+                    li
+                        p.skillsText#skillsText4 Communication

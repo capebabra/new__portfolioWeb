@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240719183333">
+    <title>Document</title>
+  </head>
+  <body> 
+    <div class="wrapper"> 
+            <header class="header" id="header">
+              <div class="header__container"> 
+                <div class="container-logo"><a href="#header"><picture><source srcset="img/logo.webp" type="image/webp"><img class="logo" src="img/logo.png" alt="logo" draggable="false"></picture></a></div>
+                <div class="container-navigation"><a class="navigation-element" href="#aboutMe">About me</a><a class="navigation-element" href="#skills">Skills</a><a class="navigation-element" href="#hobbies">Hobby</a>
+                  <div class="navigation-select">
+                    <div class="selected-element" id="languageSelected"><img class="selectedImg" id="selectedImg" src="" alt="usa" draggable="false">
+                      <p class="selectedText" id="selectedText">EN</p>
+                    </div>
+                    <div class="select-choseElement" id="languageSwitcher">
+                      <div class="select-element">
+                        <ul class="navigation__selectContent" id="english">
+                          <li> <picture><source srcset="img/usa.webp" type="image/webp"><img class="selectedImg" src="img/usa.png" alt="usa" draggable="false"></picture></li>
+                          <li>
+                            <p class="selectText">EN</p>
+                          </li>
+                        </ul>
+                        <ul class="navigation__selectContent" id="russian">
+                          <li> <picture><source srcset="img/russia.webp" type="image/webp"><img class="selectedImg" src="img/russia.png" alt="usa" draggable="false"></picture></li>
+                          <li>
+                            <p class="selectText">RU</p>
+                          </li>
+                        </ul>
+                        <ul class="navigation__selectContent" id="uzbek">
+                          <li> <picture><source srcset="img/uzbek.webp" type="image/webp"><img class="selectedImg" src="img/uzbek.png" alt="usa" draggable="false"></picture></li>
+                          <li>
+                            <p class="selectText">UZ</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <main class="main" id="main">
+              <div class="main__modalContainer" id="modalMain">
+                <div class="main__modalPage"> 
+                  <div class="modalExit"><a class="modalPage-exit" id="modalExit">&times;</a></div>
+                  <div class="modalPage__wrapper"><img class="modalPage-imgContent" id="modalPageImg" src="" alt="modalPage image" draggable="false">
+                    <div class="modalPage-textContent"> 
+                      <p class="modalPage__text" id="modalPageText">Lorem ipsum dolor sit amet consectetur. Enim sit scelerisque augue porttitor. Aenean egestas sed fusce arcu sagittis quis lorem. Rhoncus scelerisque velit phasellus ipsum feugiat gravida pulvinar odio. Volutpat cras diam rhoncus quis eu quis sed donec.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main__container">
+                <div class="container__textContent">
+                  <h6 class="textContent-subheading">Hello Im </h6>
+                  <h3 class="textContent-heading">SHUKUROV RASHID </h3>
+                  <p class="textContent-paragraph">This portfolio website serves as a testament to my ongoing development in skills and self-awareness.</p><a class="textContent-link" href="#">Contact me </a>
+                </div>
+                <div class="container__imgContent"><picture><source srcset="img/mainMe.webp" type="image/webp"><img class="imgContent-mainImg" src="img/mainMe.png" alt="" draggable="false"></picture></div>
+              </div>
+              <div class="main__container2" id="aboutMe"> 
+                <div class="container__newimgContent"> <picture><source srcset="img/mainMe2.webp" type="image/webp"><img class="imgContent-imgMain" src="img/mainMe2.png" alt="" draggable="false"></picture></div>
+                <div class="container__textInfo"> 
+                  <h6 class="textContent-info">About me</h6>
+                  <p class="textContent-paragraphInfo"><strong class="paragraphBold">Shukurov Rashid </strong><span>- I strive to enhance my developer experience and be adaptable across diverse IT fields. I aim to stay relevant in various areas to contribute to innovative projects. I am eager to enrich my IT knowledge and skills by pursuing internships at different companies, where I can learn from professionals and tackle real-world challenges. This practical experience will help me become a more versatile and effective contributor to the tech industry.</span></p>
+                </div>
+              </div>
+            </main>
+            <skills class="skills" id="skills">
+              <div class="skills__container">
+                <h3 class="containerHeading">Skills</h3>
+                <div class="container-headingSkills"> 
+                  <input type="radio" id="soft" name="skill" checked>
+                  <label class="headingSkillsSoft" for="soft" id="softSkills">Soft</label>
+                  <input type="radio" id="hard" name="skill">
+                  <label class="headingSkillsHard" for="hard" id="hardSkills">Hard</label>
+                </div>
+                <div class="container-contentSkillsImg" id="contentSkillsImg">
+                  <ul class="contentSkillsImg" id="listSkill1">
+                    <li><img class="skillsImg" id="skillsImg1" src="" alt="" draggable="false"></li>
+                    <li>
+                      <p class="skillsText" id="skillsText1">Active Learning</p>
+                    </li>
+                  </ul>
+                  <ul class="contentSkillsImg" id="listSkill2">
+                    <li><img class="skillsImg" id="skillsImg2" src="" alt="" draggable="false"></li>
+                    <li>
+                      <p class="skillsText" id="skillsText2">Adaptability</p>
+                    </li>
+                  </ul>
+                  <ul class="contentSkillsImg" id="listSkill3">
+                    <li><img class="skillsImg" id="skillsImg3" src="" alt="" draggable="false"></li>
+                    <li>
+                      <p class="skillsText" id="skillsText3">Critical Thinking</p>
+                    </li>
+                  </ul>
+                  <ul class="contentSkillsImg" id="listSkill4">
+                    <li><img class="skillsImg" id="skillsImg4" src="" alt="" draggable="false"></li>
+                    <li>
+                      <p class="skillsText" id="skillsText4">Communication</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </skills>
+            <hobbies class="hobbies" id="hobbies"> 
+              <div class="hobbies__container"> 
+                <div class="container-headingHobbies">
+                  <h3 class="headingHobbies">Hobby</h3>
+                </div>
+                <div class="container-contentHobbiesImg"><picture><source srcset="img/football.webp" type="image/webp"><img class="contentHobbies-img" src="img/football.png" alt="football" draggable="false"></picture>
+                  <div class="contentHobbies-text">
+                    <div class="contentHobbies-textInfo">
+                      <h3 class="contentHobbies-textHeading">Football</h3>
+                      <p class="contentHobbies-textParagraph">One of my hobbies is football, which provides the opportunity to reunite with long-time friends and engage in enjoyable competitive activities.</p>
+                    </div><a class="contentHobbies-link" id="hobbies1">More details</a>
+                  </div>
+                </div>
+                <div class="container-contentHobbiesImg"><picture><source srcset="img/snowboarding.webp" type="image/webp"><img class="contentHobbies-img" src="img/snowboarding.png" alt="football" draggable="false"></picture>
+                  <div class="contentHobbies-text">
+                    <div class="contentHobbies-textInfo">
+                      <h3 class="contentHobbies-textHeading">Snowboarding</h3>
+                      <p class="contentHobbies-textParagraph">Snowboarding has been one of my longstanding hobby-sports. Since 2018, I have been training and riding a snowboard.</p>
+                    </div><a class="contentHobbies-link" id="hobbies2">More details</a>
+                  </div>
+                </div>
+                <div class="container-contentHobbiesImg"><picture><source srcset="img/badminton.webp" type="image/webp"><img class="contentHobbies-img" src="img/badminton.png" alt="football" draggable="false"></picture>
+                  <div class="contentHobbies-text">
+                    <div class="contentHobbies-textInfo">
+                      <h3 class="contentHobbies-textHeading">Badminton</h3>
+                      <p class="contentHobbies-textParagraph">Badminton, after morning workouts on the pull-up bars, is the most enjoyable way to train strength and endurance, invigorating you for the entire day.</p>
+                    </div><a class="contentHobbies-link" id="hobbies3">More details</a>
+                  </div>
+                </div>
+                <div class="container-contentHobbiesImg"><picture><source srcset="img/guitar.webp" type="image/webp"><img class="contentHobbies-img" src="img/guitar.png" alt="football" draggable="false"></picture>
+                  <div class="contentHobbies-text">
+                    <div class="contentHobbies-textInfo">
+                      <h3 class="contentHobbies-textHeading">Guitar</h3>
+                      <p class="contentHobbies-textParagraph">Playing the guitar brings immense joy, as the ability to replicate my favorite songs on a musical instrument has always inspired me. The skill of playing the guitar helps me cope with tension and stress, providing a therapeutic and creative outlet.</p>
+                    </div><a class="contentHobbies-link" id="hobbies4">More details</a>
+                  </div>
+                </div>
+              </div>
+            </hobbies>
+            <footer class="footer">
+              <div class="footer__container"> 
+                <div class="container-logo"><a href="#"><picture><source srcset="img/logo.webp" type="image/webp"><img class="logo" src="img/logo.png" alt="logo" draggable="false"></picture></a></div>
+                <div class="container-navigation">
+                  <div class="container-navigationBar"><a class="navigation-element" href="#aboutMe">About me</a><a class="navigation-element" href="#skills">Skills</a><a class="navigation-element" href="#hobbies">Hobby</a></div>
+                  <div class="container-socials"> <a href="https://www.instagram.com/rashid941shukurov/" target="_blank"><picture><source srcset="img/instagram.webp" type="image/webp"><img class="socials-inst" src="img/instagram.png" alt="instagram" draggable="false"></picture></a><a href="https://t.me/capebabra3" target="_blank"> <picture><source srcset="img/telegram.webp" type="image/webp"><img class="socials-teleg" src="img/telegram.png" alt="telegram" draggable="false"></picture></a></div>
+                </div>
+              </div>
+            </footer>
+    </div>
+    <script src="js/app.min.js?_v=20240719183333"> </script>
+  </body>
+</html>

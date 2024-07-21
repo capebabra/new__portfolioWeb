@@ -1,0 +1,150 @@
+
+.main{
+    background-color: #060606;
+    padding: 60px 50px;
+    padding-bottom: 20px;
+    .main__container{
+        display: flex;
+        color: #ffff;
+        gap: 140px;
+        .container__textContent{
+            position: relative;
+            top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 600px;
+            .textContent-subheading{
+                color: #F0A44D;
+                font-size: 28px;
+                font-family: Montserrat;
+                font-weight: 700;
+            }
+            .textContent-heading{
+                font-size: 44px;
+                font-family: Montserrat;
+                font-weight: 700;
+            }
+            .textContent-paragraph{
+                font-size: 18px;
+                font-family: Montserrat;
+                font-weight: 500;
+                padding: 20px 0;
+            }
+            .textContent-link{
+                font-size: 16px;
+                font-family: Montserrat;
+                font-weight: 500;
+                border-radius: 10px;
+                padding: 10px 5px;
+                width: 160px;
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+                background: linear-gradient(to right, #FDB163, #ED8D2B);
+                &:active{
+                    background: linear-gradient(to right, #d09152, #b66b20);
+                }
+            }
+        }
+        .container__imgContent{
+            width: 331px;
+            height: 370px;
+            
+            .imgContent-mainImg{
+                width: 100%;
+                cursor: default;
+
+            }
+        }
+    }
+    .main__container2{
+        display: flex;
+        gap: 160px;
+        color: #ffff;
+        padding: 30px 0;
+        .container__newimgContent{
+            padding-left: 50px;
+            width: 400px;
+            .imgContent-imgMain{
+                width: 100%;
+                cursor: default;
+
+            }
+        }
+        .container__textInfo{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 600px;
+            line-height: 27px;
+            position: relative;
+            top: 10px;
+            .textContent-info{
+                font-size: 24px;
+                font-family: Montserrat;
+                font-weight: 600;
+                background: linear-gradient(to right, #FDB163, #ED8D2B);
+                background-clip: text;
+                color: transparent;
+                text-shadow: 0 0 30px rgba(255, 165, 0, 0.7); /* Эффект свечения */
+            }
+            .textContent-paragraphinfo {
+                font-size: 21px;
+                font-family: Montserrat;
+            }
+        }
+    }
+    .main__modalContainer{
+        position: relative;
+        display: none;
+        
+        .main__modalPage{
+            position: relative;
+            background-color: #111111;
+            padding: 10px 40px;
+            padding-bottom: 0;
+            position: absolute;
+            z-index: 1;
+            border-radius: 15px;
+            margin: 10px 40px;
+            margin-right: 100px;
+            color: #ffff;
+            .modalExit{
+                display: flex;
+                justify-content: right;
+                .modalPage-exit{
+                    font-size: 30px;
+                    padding-bottom: 5px;
+                    &:active{
+                        color: #c2c2c2;
+                    }
+                }
+            }
+    
+            .modalPage__wrapper{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+                .modalPage-imgContent{
+                    width: 95%;
+                    height: 360px;
+                }
+                .modalPage-textContent{
+                    display: block;
+                    width: fit-content;
+                    margin: auto;
+                    text-align: center; 
+                    white-space: pre-line; 
+                    line-height: 1.5; 
+                    .modalPage-text{
+                        font-size: 16px;
+                        font-family: 'Montserrat';
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.skills {
+    background-color: #060606;
+    padding: 60px 50px;
+
+    .skills__container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+
+        .containerHeading {
+            font-size: 24px;
+            font-family: Montserrat;
+            font-weight: 600;
+            background: linear-gradient(to right, #FDB163, #ED8D2B);
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(255, 165, 0, 0.7);
+        }
+
+        .container-headingSkills {
+            display: flex;
+            gap: 680px;
+            justify-content: center;
+            padding-bottom: 20px;
+            position: relative; // Добавляем position для контейнера
+
+            input[type="radio"] {
+                display: none;
+            }
+
+            .headingSkillsSoft,
+            .headingSkillsHard {
+                font-size: 24px;
+                font-family: Montserrat;
+                font-weight: 600;
+                color: white;
+                cursor: pointer;
+                position: relative;
+            }
+
+            .headingSkillsSoft::after,
+            .headingSkillsHard::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background: #FDB163;
+                bottom: -5px;
+                left: 0;
+                transition: transform 0.3s ease;
+                transform: scaleX(0);
+                transform-origin: left;
+            }
+
+            input#soft:checked + label.headingSkillsSoft::after {
+                transform: scaleX(1);
+            }
+
+            input#hard:checked + label.headingSkillsHard::after {
+                transform: scaleX(1);
+            }
+        }
+
+        .container-contentSkillsImg {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            .contentSkillsImg {
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+
+                .skillsImg {
+                    width: 250px;
+                    height: 300px;
+                    transition: opacity 0.5s ease;
+                }
+
+                .skillsText {
+                    cursor: pointer;
+                    font-size: 16px;
+                    color: white;
+                    font-family: Montserrat;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+mixin header
+    header.header#header
+        .header__container 
+            .container-logo
+                a(href="#header")
+                    img.logo(src="@img/logo.png", alt="logo", draggable="false")
+            .container-navigation
+                a.navigation-element(href="#aboutMe") About me
+                a.navigation-element(href="#skills") Skills
+                a.navigation-element(href="#hobbies") Hobby
+                .navigation-select
+                    .selected-element#languageSelected
+                        img.selectedImg#selectedImg(src="", alt="usa" draggable="false")   
+                        p.selectedText#selectedText EN
+                    .select-choseElement#languageSwitcher
+                        .select-element
+                            ul.navigation__selectContent#english
+                                li 
+                                    img.selectedImg(src="@img/usa.png", alt="usa" draggable="false")
+                                li
+                                    p.selectText EN
+                            ul.navigation__selectContent#russian
+                                li 
+                                    img.selectedImg(src="@img/russia.png", alt="usa" draggable="false")
+                                li
+                                    p.selectText RU
+                            ul.navigation__selectContent#uzbek
+                                li 
+                                    img.selectedImg(src="@img/uzbek.png", alt="usa" draggable="false")
+                                li
+                                    p.selectText UZ
