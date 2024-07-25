@@ -65,10 +65,6 @@ html {
   /* Firefox */
 }
 
-.no-scroll {
-  overflow: hidden;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -139,13 +135,13 @@ a {
   gap: 65px;
 }
 
-.header .header__container .container-navigation .navigation-element {
+.header .header__container .container-navigation .navigation-elementH {
   font-size: 20px;
   font-family: "Montserrat";
   font-weight: 500;
 }
 
-.header .header__container .container-navigation .navigation-element:hover {
+.header .header__container .container-navigation .navigation-elementH:hover {
   color: #ffffff;
 }
 
@@ -164,6 +160,7 @@ a {
   display: none;
   position: absolute;
   margin-top: 40px;
+  z-index: 1000;
 }
 
 .header .header__container .container-navigation .navigation-select .select-choseElement .select-element {
@@ -190,7 +187,7 @@ a {
   cursor: pointer;
 }
 
-.header .header__container .container-navigation .navigation-select .select-choseElement .select-element .navigation__selectContent .selectedImg {
+.header .header__container .container-navigation .navigation-select .select-choseElement .select-element .navigation__selectContent .selectImg {
   width: 26px;
 }
 
@@ -248,6 +245,9 @@ a {
   background-color: #060606;
   padding: 60px 50px;
   padding-bottom: 20px;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: opacity;
 }
 
 .main .main__container {
@@ -770,14 +770,14 @@ img {
   gap: 30px;
 }
 
-.footer .footer__container .container-navigation .container-navigationBar .navigation-element {
+.footer .footer__container .container-navigation .container-navigationBar .navigation-elementF {
   text-decoration: none;
   font-size: 20px;
   font-family: Montserrat;
   font-weight: 500;
 }
 
-.footer .footer__container .container-navigation .container-navigationBar .navigation-element:hover {
+.footer .footer__container .container-navigation .container-navigationBar .navigation-elementF:hover {
   color: white;
 }
 

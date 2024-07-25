@@ -6,204 +6,197 @@ functions.isWebp();
 
 // const swiper = new Swiper();
 
-// Skills Function
-const softSkills = document.getElementById('soft');
-const hardSkills = document.getElementById('hard');
+let translationData = {}
+let langType = 'en' // Установите начальный язык
 
-const skillImg1 = document.getElementById('skillsImg1');
-const skillImg2 = document.getElementById('skillsImg2');
-const skillImg3 = document.getElementById('skillsImg3');
-const skillImg4 = document.getElementById('skillsImg4');
-const skillText1 = document.getElementById('skillsText1');
-const skillText2 = document.getElementById('skillsText2');
-const skillText3 = document.getElementById('skillsText3');
-const skillText4 = document.getElementById('skillsText4');
-
-const skills = document.getElementById('skills');
-
-// Modal Page function
-const modalMain = document.getElementById('modalMain');
-const modalExit = document.getElementById('modalExit');
-
-const modalPageText = document.getElementById('modalPageText');
-const modalPageImg = document.getElementById('modalPageImg');
-
-const list1 = document.getElementById('listSkill1');
-const list2 = document.getElementById('listSkill2');
-const list3 = document.getElementById('listSkill3');
-const list4 = document.getElementById('listSkill4');
-
-const main = document.getElementById('main')
-
-const skillData = {
-    soft: {
-        skillImg1: {
-            text: "Active learning is a unique skill where individuals absorb material more effectively through practice. For quick and long-lasting retention, practical experience is essential, и те, кто обладает этим навыком, быстро осваивают практические задачи. Этот подход обеспечивает более глубокое и продолжительное понимание предмета.",
-            img: "img/soft3.png",
-        },
-        skillImg2: {
-            text: "Adaptability is a skill not inherent to everyone. It allows individuals to quickly integrate into various situations and address issues promptly. Additionally, flexibility aids in establishing immediate rapport with new people, making it easy for adaptable individuals to form connections swiftly and effortlessly. This capability is invaluable in navigating diverse environments and challenges with ease.",
-            img: "img/soft2.png",
-        },
-        skillImg3: {
-            img: "img/soft1.png",
-            text: "Critical thinking is one of the most essential skills for human development. This skill enables individuals to avoid making hasty decisions. Instead of reacting impulsively, critical thinking helps in analyzing situations thoroughly, extracting maximum insight, lessons, and even benefits. It promotes thoughtful consideration and reasoned judgment, leading to more informed and effective outcomes.",
-        },
-        skillImg4: {
-            text: "Communication is the skill of interacting with people, enabling one to establish connections with new colleagues, friends, and others. This ability is crucial for building relationships and fostering collaboration in both personal and professional settings.",
-            img: "img/soft4.png",
-        },
-    },
-    hard: {
-        skillImg1: {
-            text: "Frontend development is one of my core programming skills. It enables the creation of various impressive websites and requires the use of the popular programming language JavaScript, which is highly demanded and fundamental in many IT fields. This skill is essential for crafting engaging and functional user interfaces.",
-            img: "img/hard1.png",
-        },
-        skillImg2: {
-            text: "Game development is an exciting skill that involves creating games, adding an interesting dimension to my abilities. While I haven't yet developed any successful games, I have a solid understanding of the development process and continue to refine my skills in this area.",
-            img: "img/hard2.png",
-        },
-        skillImg3: {
-
-            text: "Content designing encompasses my diverse skills in various design fields. Throughout my studies, I have learned to use Photoshop, Canva, Blender, and Figma. I excel in each of these tools in different ways, and overall, I possess a good sense of taste and a keen designer's eye.",
-            img: "img/hard3.png",
-        },
-        skillImg4: {
-            text: "Photography is an exceptional skill, enabling one to see and capture beauty. A photographer adeptly selects angles, backgrounds, and lighting to give photos an interesting style. A good photographer can convey atmosphere and emotions through their images, making photography a captivating and valuable ability.",
-            img: "img/hard4.png",
-        },
-    }
-};
-
-const skillContent = {
-    soft: [
-        {
-            text: "Active Learning",
-            img: "img/softSkill1.png",
-        },
-        {
-            text: "Adaptability",
-            img: "img/softSkill2.png",
-        },
-        {
-            text: "Critical Thinking",
-            img: "img/softSkill3.png",
-        },
-        {
-            text: "Communication",
-            img: "img/softSkill4.png",
-        },
-    ],
-    hard: [
-        {
-            text: "Front End",
-            img: "img/hardSkill1.png",
-        },
-        {
-            text: "Game Development",
-            img: "img/hardSkill2.png",
-        },
-        {
-            text: "Designing",
-            img: "img/hardSkill3.png",
-        },
-        {
-            text: "Photography",
-            img: "img/hardSkill4.png",
-        },
-    ],
-};
-
-function contentActivation(type) {
-    setTimeout(function() {
-        skillImg1.src = skillContent[type][0].img
-        skillImg2.src = skillContent[type][1].img
-        skillImg3.src = skillContent[type][2].img
-        skillImg4.src = skillContent[type][3].img
-        skillText1.textContent = skillContent[type][0].text
-        skillText2.textContent = skillContent[type][1].text
-        skillText3.textContent = skillContent[type][2].text
-        skillText4.textContent = skillContent[type][3].text
-    }, 300)
+// Функция для загрузки JSON файла и обновления контента
+function loadTranslations() {
+    fetch('json/translate.json')
+        .then(response => response.json())
+        .then(translation => {
+            // Функция выбора языка
+            function chooselang(lang) {
+                translationData = translation[lang]
+                mainContent()
+                bothContent()
+                defaultContent()
+                hobbiesContent()
+                staticSkillsContent()
+            }
+            
+            // Выбор языка после загрузки данных
+            chooselang(langType);
+        })
 }
 
-function openModal(imgType, type) {
-    modalMain.style.display = 'block'
-    modalPageImg.src = skillData[type][imgType].img
-    modalPageText.textContent = skillData[type][imgType].text
+// Запускаем загрузку переводов после загрузки DOM
+document.addEventListener('DOMContentLoaded', loadTranslations)
+
+function layouts(layout, layoutEl) {
+    const navEl = document.querySelectorAll(layoutEl)
+    const translation = translationData[layout]
+
+    translation.forEach((element, index) => {
+        if (navEl[index]) {
+            navEl[index].textContent = element.title;
+        }
+    });
 }
 
-function defaultContent() {
-    const type = 'soft'
-    contentActivation(type)
+// Обновление контента при смене языка
+function updateContent() {
+    mainContent()
+    bothContent()
+    defaultContent()
+    hobbiesContent()
+    staticSkillsContent()
 }
-defaultContent();
+
+function mainContent() {
+    document.querySelector('.textContent-subheading').textContent = translationData["main"].mainSub;
+    document.querySelector('.textContent-heading').textContent = translationData["main"].mainHead;
+    document.querySelector('.textContent-paragraph').textContent = translationData["main"].mainPar;
+    document.querySelector('.textContent-link').textContent = translationData["main"].mainLk;
+    document.querySelector('.textContent-info').textContent = translationData["main"].mainInf;
+    document.querySelector('.textContent-paragraphInfo .paragraphBold').textContent = translationData["main"].mainParInf1;
+    document.querySelector('.textContent-paragraphInfo span').textContent = translationData["main"].mainParInf2;
+}
+
+function staticSkillsContent() {
+    document.querySelector('.containerHeading').textContent = translationData["skills"]["contHead"]
+    document.querySelector('.headingSkillsSoft').textContent = translationData["skills"]["headSk1"]
+    document.querySelector('.headingSkillsHard').textContent = translationData["skills"]["headSk2"]
+}
+
+function hobbiesContent() {
+    document.querySelector('.headingHobbies').textContent = translationData["hobbyStatic"].hobby
+
+    const translateHobbies = translationData["hobbies"]
+    const hobbiesTitle = document.querySelectorAll('.contentHobbies-textHeading')
+    const hobbiesDesc = document.querySelectorAll('.contentHobbies-textParagraph')
+    const hobbiesLink = document.querySelectorAll('.contentHobbies-link')
+    const hobbiesImg = document.querySelectorAll('.contentHobbies-img')
+
+    translateHobbies.forEach((element, index) => {
+        if (hobbiesTitle[index]) {
+            hobbiesTitle[index].textContent = element.title
+        }
+        if (hobbiesDesc[index]) {
+            hobbiesDesc[index].textContent = element.description
+        }
+        if (hobbiesLink[index]) {
+            hobbiesLink[index].textContent = element.link
+        }
+        if (hobbiesImg[index]) {
+            hobbiesImg[index].setAttribute('src', element.img)
+        }
+    });
+}
+
+function bothContent() {
+    const header = 'header'
+    const footer = 'footer'
+    
+    const navF = '.navigation-elementF'
+    const navH = '.navigation-elementH'
+    layouts(footer, navF)
+    layouts(header, navH)
+}
 
 modalExit.onclick = function() {
-    document.body.classList.remove('no-scroll'); // При закрытии
     modalMain.style.display = 'none'
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = 'auto'
+};
+const modalMain = document.getElementById('modalMain')
+
+function openModal(layoutType) {
+    console.log('Opening modal with:', layoutType)
+    modalMain.style.display = 'block'
+    const modalPage = document.querySelector('.modalPage__text')
+    const modalImg = document.querySelector('.modalPage-imgContent')
+    
+    modalPage.textContent = layoutType["text"]
+    modalImg.src = layoutType["img"]
 }
+
+const skills = document.querySelector('.skills')
 
 skills.onclick = function(event) {
     const target = event.target.closest('label')
     if (target) {
-        const skillType = target.htmlFor;
+        const skillType = target.htmlFor
         const type = skillType === 'soft' ? 'soft' : 'hard'
         contentActivation(type)
     }
-
     const ulTarget = event.target.closest('ul')
     if (ulTarget) {
-        const skillType = softSkills.checked ? 'soft' : 'hard'
-        const imgType = ulTarget.id.replace('listSkill', 'skillImg')
-        openModal(imgType, skillType)
-        setTimeout(function(){
-            smoothsCroll(modalMain)
-        }, 200)
+        const skillsUl = document.querySelectorAll('.contentSkillsImg')
+        let skillChecker = softSkills.checked ? 'soft' : 'hard'
+        const translateSkillsLang = translationData["skillData"][skillChecker]
+
+        translateSkillsLang.forEach((element, index) => {
+            if (skillsUl[index]) {
+                skillsUl[index].onclick = () => {
+                    const ulContent = element
+                    openModal(ulContent)
+                    setTimeout(function(){
+                        smoothsCroll(modalMain)
+                    }, 200)
+                }
+            }
+        })
     }
 }
 
+function contentActivation(type) {
+    const skillsContentTranslation = translationData["skillContent"][type]
+    const skillText = document.querySelectorAll(".skillsText")
+    const skillImg = document.querySelectorAll(".skillsImg")
 
-const hobbiesContent = document.getElementById('hobbies')
+    skillsContentTranslation.forEach((element, index) => {
+        if (skillText[index]) {
+            skillText[index].textContent = element.text
+        }
 
-
-const hobbiesContainer = {
-    hobbies1:{
-        text: 'Football benefits many aspects of life, requiring physical endurance and strength. It emphasizes teamwork, understanding, and cohesion, while also demanding leadership and effective communication to maintain morale and team spirit.',
-        img: 'img/hobbies1.png',
-    },
-    hobbies2:{
-        text: 'Snowboarding is a unique and beneficial hobby that offers unforgettable experiences while promoting leg strength and cardiovascular health. It also provides opportunities to meet diverse individuals, fostering potential close friendships.',
-        img: 'img/hobbies2.png',
-    },
-    hobbies3:{
-        text: 'Badminton requires exceptional reflexes, endurance, and attention to detail for tracking the shuttlecock. This engaging sport promotes physical fitness and is widely appreciated across various cultures.',
-        img: 'img/hobbies3.png',
-    },
-    hobbies4:{
-        text: 'Playing the guitar is a distinctive hobby that demonstrates an individual’s sense of taste and musicality. It not only fosters creativity and self-expression but also provides opportunities for social interaction, including the potential to meet new people and develop meaningful relationships. :)',
-        img: 'img/hobbies4.png',
-    },
+        if (skillImg[index]) {
+            skillImg[index].setAttribute('src', element.img)
+        }
+    });
 }
 
-function hobbiesModal(imgType) {
-    modalMain.style.display = 'block'
-    modalPageImg.src = hobbiesContainer[imgType].img
-    modalPageText.textContent = hobbiesContainer[imgType].text
+function defaultContent() {
+    const softType = 'soft'
+    contentActivation(softType)
 }
+
 function smoothsCroll(window) {
-    document.body.style.overflow = 'hidden';
-    window.scrollIntoView({ behavior: 'smooth'});    
+    window.scrollIntoView({ behavior: 'smooth' });  
+    setTimeout(() => {
+        document.body.style.overflow = 'hidden';
+    }, 200)
 }
 
-hobbiesContent.onclick = function (event) {
-    const linkTarget = event.target.closest('a');
-    const imgType = linkTarget.id
-    hobbiesModal(imgType)
-    setTimeout(function(){
-        smoothsCroll(modalMain)
-    }, 200)
+const hobbies = document.getElementById('hobbies')
+
+hobbies.onclick = (event) => {
+    const target = event.target.closest('a');
+    if (target) {
+        const hobbyTranslate = translationData["hobbiesContainer"]
+
+        const hobbyLink = document.querySelectorAll('.contentHobbies-link')
+
+        hobbyTranslate.forEach((element, index) => {
+            if (hobbyLink[index]) {
+                hobbyLink[index].onclick = () => {
+                    const linkType = element;
+                    openModal(linkType);
+                    setTimeout(function(){
+                        smoothsCroll(modalMain)
+                    }, 200)
+                }
+            }
+        })
+    }
 }
 
 const languageSwitcher = document.getElementById('languageSwitcher')
@@ -212,38 +205,38 @@ const selectedImg = document.getElementById('selectedImg')
 const selectedText = document.getElementById('selectedText')
 
 const languagContainer = {
-    english:{
+    en: {
         text: 'EN',
         img: 'img/usa.png',
     },
-    russian:{
+    ru: {
         text: 'RU',
         img: 'img/russia.png',
-    },
-    uzbek:{
-        text: 'UZ',
-        img: 'img/uzbek.png',
-    },
-}
+    }
+};
 
 function languageChange(lang) {
+    langType = lang
     languageSwitcher.style.display = 'none'
     selectedImg.src = languagContainer[lang].img
     selectedText.textContent = languagContainer[lang].text
+
+    // Загрузите и примените переводы для выбранного языка
+    loadTranslations()
 }
 
 function defualtLang() {
-    const langType = 'english'
-    languageChange(langType)
+    const defaultLang = 'en'
+    languageChange(defaultLang)
 }
 defualtLang()
 
 languageSelected.onclick = function() {
     languageSwitcher.style.display = 'block'
-    languageSwitcher.addEventListener('click', function(event){
+    languageSwitcher.addEventListener('click', function(event) {
         const target = event.target.closest('ul')
         if (!target) return
         const langType = target.id
         languageChange(langType)
-    })
-}
+    });
+};

@@ -3,6 +3,8 @@
     background-color: #060606;
     padding: 60px 50px;
     padding-bottom: 20px;
+    transform: translateZ(0);
+    will-change: opacity;
     .main__container{
         display: flex;
         color: #ffff;

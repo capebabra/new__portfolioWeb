@@ -20,6 +20,7 @@ import { images } from "./gulp/tasks/images.js";
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
 import { svgSprive } from "./gulp/tasks/svgSprive.js";
 import { zip } from "./gulp/tasks/zip.js";
+import { copyJson } from "./gulp/tasks/copyJson.js"; // Импортируем задачу
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
@@ -28,15 +29,16 @@ function watcher() {
     gulp.watch(path.watch.scss, scss);
     gulp.watch(path.watch.js, js);
     gulp.watch(path.watch.images, images);
+    gulp.watch(path.watch.json, copyJson); // Добавляем наблюдение за JSON-файлами
 }
 
 export { svgSprive }
 
-// Аоследовательная обработка шрифтов
+// Последовательная обработка шрифтов
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 // Основные задачи
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images));
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, copyJson)); // Добавляем copyJson
 
 // Построение сценариев
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
