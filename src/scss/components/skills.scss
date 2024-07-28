@@ -17,6 +17,16 @@
             color: transparent;
             text-shadow: 0 0 30px rgba(255, 165, 0, 0.7);
         }
+        .skillsHeading-animation{
+            opacity: var(--opacity-hidden);
+            transition: var(--transition-hidden);
+            filter: var(--filter-hidden);
+        }
+        .show{
+            opacity: var(--opacity-show);
+            transition: var(--transition-show);
+            filter: var(--filter-show);
+        }
 
         .container-headingSkills {
             display: flex;
@@ -60,6 +70,26 @@
             input#hard:checked + label.headingSkillsHard::after {
                 transform: scaleX(1);
             }
+
+            .skillsHard-animation{
+                opacity: var(--opacity-hidden);
+                transition: var(--transition-hidden);
+                filter: var(--filter-hidden);
+                transform: var(--transform-rightImg);
+            }
+            .skillsSoft-animation{
+                opacity: var(--opacity-hidden);
+                transition: var(--transition-hidden);
+                filter: var(--filter-hidden);
+                transform: var(--transform-hidden);
+            }
+
+            .show{
+                opacity: var(--opacity-show);
+                transition: var(--transition-show);
+                filter: var(--filter-show);
+                transform: var( --transform-show);
+            }
         }
 
         .container-contentSkillsImg {
@@ -86,6 +116,27 @@
                     font-family: Montserrat;
                     font-weight: 400;
                 }
+            }
+            .skillsUl{
+                opacity: var(--opacity-hidden);
+                transition: var(--transition-hidden);
+                filter: var(--filter-hidden);
+                transform: var(--transform-hidden);
+            }
+            .show{
+                opacity: var(--opacity-show);
+                transition: var(--transition-show);
+                filter: var(--filter-show);
+                transform: var( --transform-show);
+            }
+            .skillsUl:nth-child(2){
+                transition-delay: 200ms;
+            }
+            .skillsUl:nth-child(3){
+                transition-delay: 300ms;
+            }
+            .skillsUl:nth-child(4){
+                transition-delay: 400ms;
             }
         }
     }

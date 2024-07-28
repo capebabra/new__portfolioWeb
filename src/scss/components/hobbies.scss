@@ -10,7 +10,7 @@
         align-items: center;
         gap: 50px;
 
-        .container-headingHobbies {
+        .headingHobbies {
             font-size: 24px;
             font-family: Montserrat;
             font-weight: 600;
@@ -19,6 +19,16 @@
             color: transparent;
             text-shadow: 0 0 30px rgba(255, 165, 0, 0.7);
             padding-bottom: 30px;
+        }
+        .headingHobbies-animation {
+            opacity: var(--opacity-hidden);
+            transition: var(--transition-hidden);
+            filter: var(--filter-hidden);
+        }
+        .show {
+            opacity: var(--opacity-show);
+            transition: var(--transition-show);
+            filter: var(--filter-show);
         }
 
         .container-contentHobbiesImg {
@@ -35,7 +45,6 @@
                 height: 290px;
                 display: block;
                 cursor: default;
-
             }
     
             .contentHobbies-text {
@@ -86,6 +95,16 @@
                     }
                 }
             }
+        }
+        .imgHobbies-animation {
+            opacity: var(--opacity-hidden);
+            transition: var(--transition-hidden);
+            filter: var(--filter-hidden);
+        }
+        .show {
+            opacity: var(--opacity-show);
+            transition: var(--transition-show);
+            filter: var(--filter-show);
         }
     }
 }

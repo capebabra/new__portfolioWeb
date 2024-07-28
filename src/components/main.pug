@@ -10,17 +10,17 @@ mixin main
                         p.modalPage__text#modalPageText 
         .main__container
             .container__textContent
-                h6.textContent-subheading Hello Im
-                h3.textContent-heading SHUKUROV RASHID 
-                p.textContent-paragraph 
-                a.textContent-link(href="#") Contact me 
+                h6.textContent-subheading.hidden Hello Im
+                h3.textContent-heading.hidden SHUKUROV RASHID 
+                p.textContent-paragraph.hidden 
+                a.textContent-link(href="https://t.me/capebabra3" target="_blank").hidden Contact me 
             .container__imgContent
-                img.imgContent-mainImg(src="@img/mainMe.png", alt="",draggable="false")
+                img.imgContent-mainImg(src="@img/mainMe.png", alt="",draggable="false").imgContent-anim
         .main__container2#aboutMe 
-            .container__newimgContent 
-                img.imgContent-imgMain(src="@img/mainMe2.png", alt="",draggable="false")
-            .container__textInfo 
-                h6.textContent-info About me
-                p.textContent-paragraphInfo
-                    strong.paragraphBold Shukurov Rashid 
+            .container__newimgContent
+                img.imgContent-imgMain(src="@img/mainMe2.png", alt="",draggable="false").imgContent-anim
+            .container__textInfo
+                h6.textContent-info.textContent-anim About me
+                p.textContent-paragraphInfo.textContent-anim
+                    strong.paragraphBold.textContent-anim Shukurov Rashid 
                     span - I strive to enhance my developer experience and be adaptable across diverse IT fields. I aim to stay relevant in various areas to contribute to innovative projects. I am eager to enrich my IT knowledge and skills by pursuing internships at different companies, where I can learn from professionals and tackle real-world challenges. This practical experience will help me become a more versatile and effective contributor to the tech industry.

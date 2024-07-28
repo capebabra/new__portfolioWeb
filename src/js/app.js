@@ -38,7 +38,7 @@ function layouts(layout, layoutEl) {
 
     translation.forEach((element, index) => {
         if (navEl[index]) {
-            navEl[index].textContent = element.title;
+            navEl[index].textContent = element.title
         }
     });
 }
@@ -53,13 +53,13 @@ function updateContent() {
 }
 
 function mainContent() {
-    document.querySelector('.textContent-subheading').textContent = translationData["main"].mainSub;
-    document.querySelector('.textContent-heading').textContent = translationData["main"].mainHead;
-    document.querySelector('.textContent-paragraph').textContent = translationData["main"].mainPar;
-    document.querySelector('.textContent-link').textContent = translationData["main"].mainLk;
-    document.querySelector('.textContent-info').textContent = translationData["main"].mainInf;
-    document.querySelector('.textContent-paragraphInfo .paragraphBold').textContent = translationData["main"].mainParInf1;
-    document.querySelector('.textContent-paragraphInfo span').textContent = translationData["main"].mainParInf2;
+    document.querySelector('.textContent-subheading').textContent = translationData["main"].mainSub
+    document.querySelector('.textContent-heading').textContent = translationData["main"].mainHead
+    document.querySelector('.textContent-paragraph').textContent = translationData["main"].mainPar
+    document.querySelector('.textContent-link').textContent = translationData["main"].mainLk
+    document.querySelector('.textContent-info').textContent = translationData["main"].mainInf
+    document.querySelector('.textContent-paragraphInfo .paragraphBold').textContent = translationData["main"].mainParInf1
+    document.querySelector('.textContent-paragraphInfo span').textContent = translationData["main"].mainParInf2
 }
 
 function staticSkillsContent() {
@@ -69,7 +69,7 @@ function staticSkillsContent() {
 }
 
 function hobbiesContent() {
-    document.querySelector('.headingHobbies').textContent = translationData["hobbyStatic"].hobby
+    document.querySelector('.headingHobbies').textContent = translationData["hobbyStatic"]["hobby"]
 
     const translateHobbies = translationData["hobbies"]
     const hobbiesTitle = document.querySelectorAll('.contentHobbies-textHeading')
@@ -106,10 +106,20 @@ function bothContent() {
 modalExit.onclick = function() {
     modalMain.style.display = 'none'
     document.body.style.overflow = 'auto'
-};
+
+    mainContainer.classList.remove('modalBlur')
+    mainContainer2.classList.remove('modalBlur')
+}
 const modalMain = document.getElementById('modalMain')
+const mainContainer = document.querySelector('.main__container')
+const mainContainer2 = document.querySelector('.main__container2')
+
+
 
 function openModal(layoutType) {
+    mainContainer.classList.add('modalBlur');
+    mainContainer2.classList.add('modalBlur');
+
     console.log('Opening modal with:', layoutType)
     modalMain.style.display = 'block'
     const modalPage = document.querySelector('.modalPage__text')
@@ -238,5 +248,47 @@ languageSelected.onclick = function() {
         if (!target) return
         const langType = target.id
         languageChange(langType)
+    })
+}
+
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show')
+        } else {
+            entry.target.classList.remove('show')
+        }
     });
-};
+});
+
+function animationActivation(animObj) {
+    const hiddenElements = animObj;
+    hiddenElements.forEach((el) => observer.observe(el))
+}
+
+function animObjects() {
+    let hiddenObj = document.querySelectorAll('.hidden');
+    animationActivation(hiddenObj)
+    let textContent = document.querySelectorAll('.textContent-anim')
+    animationActivation(textContent)
+    let imgContentMain = document.querySelectorAll('.imgContent-mainImg')
+    animationActivation(imgContentMain)
+    let imgContentMain2 = document.querySelectorAll('.imgContent-imgMain')
+    animationActivation(imgContentMain2)
+
+    let skillsHeading = document.querySelectorAll('.containerHeading')
+    let skillsSoft = document.querySelectorAll('.headingSkillsSoft')
+    let skillsHard = document.querySelectorAll('.headingSkillsHard')
+    animationActivation(skillsHeading)
+    animationActivation(skillsSoft)
+    animationActivation(skillsHard)
+    let skillsUl = document.querySelectorAll('.skillsUl')
+    animationActivation(skillsUl)
+
+    let imgHobbies = document.querySelectorAll('.container-contentHobbiesImg')
+    animationActivation(imgHobbies)
+    let hobbiesHeading = document.querySelectorAll('.headingHobbies')
+    animationActivation(hobbiesHeading)
+}
+animObjects();

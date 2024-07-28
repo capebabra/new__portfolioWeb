@@ -2,6 +2,7 @@ html {
     overflow: -moz-scrollbars-none; /* Firefox */
     -ms-overflow-style: none;       /* Internet Explorer 10+ */
     scrollbar-width: none;          /* Firefox */
+    scroll-behavior: smooth;
 }
 *{
     padding: 0;
@@ -12,6 +13,17 @@ html {
 a{
     text-decoration: none;
     cursor: pointer;
+}
+:root{
+    --opacity-hidden: 0;
+    --transition-hidden: all 1.2s;
+    --filter-hidden: blur(4px);
+    --transform-hidden: translate(-100%);
+    --transform-rightImg: translate(100%);
+    --opacity-show: 1;
+    --transition-show: all 1.7s;
+    --filter-show: blur(0px);
+    --transform-show: translateX(0);
 }
 
 .header{
@@ -129,3 +141,5 @@ a{
         }
     }
 }
+
+
