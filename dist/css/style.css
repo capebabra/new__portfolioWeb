@@ -268,7 +268,9 @@ a {
   display: -ms-flexbox;
   display: flex;
   color: white;
-  gap: 140px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .main .main__container .container__textContent {

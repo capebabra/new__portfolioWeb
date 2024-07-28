@@ -10,7 +10,7 @@
     .main__container{
         display: flex;
         color: #ffff;
-        gap: 140px;
+        justify-content: space-between;
         .container__textContent{
             position: relative;
             top: 30px;
