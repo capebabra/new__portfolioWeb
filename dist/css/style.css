@@ -383,25 +383,21 @@ a {
 }
 
 .main .main__container .container__imgContent .imgContent-anim {
+  display: hidden;
   opacity: var(--opacity-hidden);
   -webkit-transition: var(--transition-hidden);
   transition: var(--transition-hidden);
   -webkit-filter: var(--filter-hidden);
           filter: var(--filter-hidden);
-  -webkit-transform: var(--transform-rightImg);
-      -ms-transform: var(--transform-rightImg);
-          transform: var(--transform-rightImg);
 }
 
 .main .main__container .container__imgContent .show {
+  display: block;
   opacity: var(--opacity-show);
   -webkit-transition: var(--transition-show);
   transition: var(--transition-show);
   -webkit-filter: var(--filter-show);
           filter: var(--filter-show);
-  -webkit-transform: var(--transform-show);
-      -ms-transform: var(--transform-show);
-          transform: var(--transform-show);
 }
 
 .main .main__container2 {

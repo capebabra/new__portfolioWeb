@@ -85,16 +85,16 @@
 
             }
             .imgContent-anim{
+                display: hidden;
                 opacity: var(--opacity-hidden);
                 transition: var(--transition-hidden);
                 filter: var(--filter-hidden);
-                transform: var(--transform-rightImg);
             }
             .show{
+                display: block;
                 opacity: var(--opacity-show);
                 transition: var(--transition-show);
                 filter: var(--filter-show);
-                transform: var(--transform-show);
             }
         }
     }
