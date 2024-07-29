@@ -142,4 +142,334 @@ a{
     }
 }
 
+@media (max-width:400px) {  
+    .header{
+        padding: 20px 20px;
+        .header__container{
+            .container-logo{
+                width: 30px;
+                height: 45px;
+                .logo{
+                    border-radius: 10px;
+                }
+            }
+            .container-navigation{
+                gap: 20px;
+                .navigation-elementH{
+                    font-size: 12px;
+                }
+                .navigation-select{
+                    gap: 10px;
+                    .select-choseElement{
+                        margin-top: 40px;
+                        z-index: 1000;
+                        .select-element{
+                            border-radius: 5px;
+                            .navigation__selectContent{
+                                padding: 8px 8px;
+                                width: 70px;
+                                cursor: pointer;
+                                .selectImg{
+                                    width: 25px;
+                                }
+                                .selectText{
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+    
+                    }
+                    .selected-element{
+                        gap: 6px;
+                        padding: 5px 6px;
+                        .selectedImg{
+                            width: 15px;
+    
+                        }
+                        .selectedText{
+                            font-size: 12px;    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
+@media (max-width:450px) {
+    .header{
+        padding: 20px 20px;
+        .header__container{
+            .container-logo{
+                width: 40px;
+                height: 65px;
+                .logo{
+                    border-radius: 10px;
+                }
+            }
+            .container-navigation{
+                gap: 20px;
+                .navigation-elementH{
+                    font-size: 12px;
+                }
+                .navigation-select{
+                    gap: 10px;
+                    .select-choseElement{
+                        margin-top: 40px;
+                        z-index: 1000;
+                        .select-element{
+                            border-radius: 5px;
+                            .navigation__selectContent{
+                                padding: 8px 8px;
+                                width: 70px;
+                                cursor: pointer;
+                                .selectImg{
+                                    width: 25px;
+                                }
+                                .selectText{
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+    
+                    }
+                    .selected-element{
+                        gap: 6px;
+                        padding: 5px 6px;
+                        .selectedImg{
+                            width: 15px;
+    
+                        }
+                        .selectedText{
+                            font-size: 12px;    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .header{
+        padding: 20px 40px;
+        .header__container{
+            .container-logo{
+                width: 60px;
+                height: 85px;
+                .logo{
+                    border-radius: 15px;
+                }
+            }
+            .container-navigation{
+                gap: 30px;
+                .navigation-elementH{
+                    font-size: 18px;
+                }
+                .navigation-select{
+                    gap: 20px;
+                    .select-choseElement{
+                        margin-top: 40px;
+                        z-index: 1000;
+                        .select-element{
+                            border-radius: 5px;
+                            .navigation__selectContent{
+                                padding: 12px 8px;
+                                width: 80px;
+                                cursor: pointer;
+                                .selectImg{
+                                    width: 30px;
+                                }
+                                .selectText{
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+    
+                    }
+                    .selected-element{
+                        gap: 8px;
+                        padding: 7px 8px;
+                        .selectedImg{
+                            width: 20px;
+    
+                        }
+                        .selectedText{
+                            font-size: 16px;    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    .header{
+        padding: 30px 60px;
+        .header__container{
+            .container-logo{
+                width: 70px;
+                height: 95px;
+                .logo{
+                    border-radius: 17px;
+                }
+            }
+            .container-navigation{
+                align-items: center;
+                gap: 50px;
+                .navigation-elementH{
+                    font-size: 24px;
+                }
+                .navigation-select{
+                    gap: 20px;
+                    
+                    .select-choseElement{
+                        margin-top: 40px;
+                        z-index: 1000;
+                        .select-element{
+                            border-radius: 5px;
+                            .navigation__selectContent{
+                                padding: 10px 10px;
+                                width: 100px;
+                                cursor: pointer;
+                                .selectImg{
+                                    width: 40px;
+                                }
+                                .selectText{
+                                    font-size: 21px;
+                                }
+                            }
+                        }
+    
+                    }
+                    .selected-element{
+                        gap: 10px;
+                        padding: 7px 10px;
+                        .selectedImg{
+                            width: 30px;
+    
+                        }
+                        .selectedText{
+                            font-size: 20px;    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1500px) {
+    .header{
+        padding: 50px 80px;
+        .header__container{
+            .container-logo{
+                width: 90px;
+                height: 125px;
+                .logo{
+                    border-radius: 22px;
+                }
+            }
+            .container-navigation{
+                align-items: center;
+                gap: 70px;
+                .navigation-elementH{
+                    font-size: 30px;
+                }
+                .navigation-select{
+                    gap: 20px;
+                    
+                    .select-choseElement{
+                        margin-top: 40px;
+                        z-index: 1000;
+                        .select-element{
+                            border-radius: 5px;
+                            .navigation__selectContent{
+                                padding: 10px 10px;
+                                width: 100px;
+                                cursor: pointer;
+                                .selectImg{
+                                    width: 40px;
+                                }
+                                .selectText{
+                                    font-size: 21px;
+                                }
+                            }
+                        }
+    
+                    }
+                    .selected-element{
+                        gap: 10px;
+                        padding: 7px 10px;
+                        .selectedImg{
+                            width: 30px;
+    
+                        }
+                        .selectedText{
+                            font-size: 20px;    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1920px) {
+    .header{
+        padding: 50px 120px;
+        .header__container{
+            .container-logo{
+                width: 120px;
+                height: 165px;
+                .logo{
+                    border-radius: 32px;
+                }
+            }
+            .container-navigation{
+                align-items: center;
+                gap: 100px;
+                .navigation-elementH{
+                    font-size: 40px;
+                }
+                .navigation-select{
+                    gap: 30px;
+                    
+                    .select-choseElement{
+                        margin-left: 20px;
+                        margin-top: 60px;
+                        z-index: 1000;
+                        .select-element{
+                            border-radius: 5px;
+                            .navigation__selectContent{
+                                padding: 10px 10px;
+                                width: 130px;
+                                cursor: pointer;
+                                .selectImg{
+                                    width: 50px;
+                                }
+                                .selectText{
+                                    font-size: 32px;
+                                }
+                            }
+                        }
+    
+                    }
+                    .selected-element{
+                        gap: 15px;
+                        padding: 7px 10px;
+                        border: 0.8px solid #ffff;    
+                        .selectedImg{
+                            width: 50px;
+    
+                        }
+                        .selectedText{
+                            font-size: 30px;    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -60,3 +60,190 @@ img{
         }
     }
 }
+
+@media (max-width:400px) {  
+}
+
+@media (max-width:450px) {
+    .footer{
+        padding: 20px 20px;
+        .footer__container{
+            .container-logo{
+                .logo{
+                    border-radius: 10px;
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+            .container-navigation{
+                gap: 15px;
+                .container-navigationBar{
+
+                    gap: 10px;
+                    .navigation-elementF{
+                        font-size: 12px;
+                    }
+                }
+                .container-socials{
+                    gap: 20px;
+                    .socials-inst{
+                        width: 18px;
+                        height: 18px;
+                    }
+                    .socials-teleg{
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+@media (max-width:768px) {
+    .footer{
+        padding: 20px 40px;
+        .footer__container{
+            .container-logo{
+                .logo{
+                    border-radius: 15px;
+                    width: 50px;
+                    height: 55px;
+                }
+            }
+            .container-navigation{
+                gap: 30px;
+                .container-navigationBar{
+
+                    gap: 20px;
+                    .navigation-elementF{
+                        font-size: 16px;
+                    }
+                }
+                .container-socials{
+                    gap: 20px;
+                    .socials-inst{
+                        width: 22px;
+                        height: 22px;
+                    }
+                    .socials-teleg{
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+@media (max-width:1024px) {
+    .footer{
+        padding: 20px 60px;
+        .footer__container{
+            .container-logo{
+                .logo{
+                    border-radius: 17px;
+                    width: 60px;
+                    height: 65px;
+                }
+            }
+            .container-navigation{
+                gap: 60px;
+                .container-navigationBar{
+
+                    gap: 30px;
+                    .navigation-elementF{
+                        font-size: 22px;
+                    }
+                }
+                .container-socials{
+                    gap: 30px;
+                    .socials-inst{
+                        width: 30px;
+                        height: 30px;
+                    }
+                    .socials-teleg{
+                        width: 26px;
+                        height: 26px;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+
+
+@media (min-width:1366px) {
+    .footer{
+        padding: 20px 120px;
+        .footer__container{
+            .container-logo{
+                .logo{
+                    border-radius: 22px;
+                    width: 80px;
+                    height: 85px;
+                }
+            }
+            .container-navigation{
+                gap: 80px;
+                .container-navigationBar{
+
+                    gap: 50px;
+                    .navigation-elementF{
+                        font-size: 26px;
+                    }
+                }
+                .container-socials{
+                    gap: 40px;
+                    .socials-inst{
+                        width: 30px;
+                        height: 30px;
+                    }
+                    .socials-teleg{
+                        width: 26px;
+                        height: 26px;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+
+@media (min-width:1920px) {
+    .footer{
+        padding: 20px 120px;
+        .footer__container{
+            .container-logo{
+                .logo{
+                    border-radius: 32px;
+                    width: 120px;
+                    height: 125px;
+                }
+            }
+            .container-navigation{
+                gap: 100px;
+                .container-navigationBar{
+
+                    gap: 70px;
+                    .navigation-elementF{
+                        font-size: 36px;
+                    }
+                }
+                .container-socials{
+                    gap: 40px;
+                    .socials-inst{
+                        width: 40px;
+                        height: 40px;
+                    }
+                    .socials-teleg{
+                        width: 36px;
+                        height: 36px;
+                    }
+                }
+            }
+        }
+    }    
+}
+
