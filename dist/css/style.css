@@ -84,7 +84,7 @@ a {
   --transition-hidden: all 1.2s;
   --filter-hidden: blur(4px);
   --transform-hidden: translate(-100%);
-  --transform-rightImg: translate(100%);
+  --transform-rightImg: translate(50%);
   --opacity-show: 1;
   --transition-show: all 1.7s;
   --filter-show: blur(0px);
@@ -510,6 +510,9 @@ a {
 .main .main__modalContainer {
   position: relative;
   display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main .main__modalContainer .main__modalPage {
@@ -1551,9 +1554,6 @@ ul {
   }
 
   .main .main__modalContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2402,9 +2402,6 @@ ul {
 
   .main .main__modalContainer {
     padding: 40px 25px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -2446,12 +2443,12 @@ ul {
   }
 
   .skills .skills__container .container-headingSkills {
-    gap: 200px;
+    gap: 70px;
   }
 
   .skills .skills__container .container-headingSkills .headingSkillsSoft,
   .skills .skills__container .container-headingSkills .headingSkillsHard {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .skills .skills__container .container-contentSkillsImg {
@@ -2720,13 +2717,10 @@ ul {
   }
 
   .main .main__modalContainer {
-    padding: 40px 0px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 40px 0px;
   }
 
   .main .main__modalContainer .main__modalPage {
@@ -2765,12 +2759,12 @@ ul {
   }
 
   .skills .skills__container .container-headingSkills {
-    gap: 180px;
+    gap: 70px;
   }
 
   .skills .skills__container .container-headingSkills .headingSkillsSoft,
   .skills .skills__container .container-headingSkills .headingSkillsHard {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .skills .skills__container .container-contentSkillsImg {
@@ -2828,8 +2822,14 @@ ul {
   }
 
   .hobbies .hobbies__container .container-contentHobbiesImg .contentHobbies-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     top: 4%;
-    left: 10px;
   }
 
   .hobbies .hobbies__container .container-contentHobbiesImg .contentHobbies-text .contentHobbies-textInfo {
@@ -2846,8 +2846,8 @@ ul {
   }
 
   .hobbies .hobbies__container .container-contentHobbiesImg .contentHobbies-text .contentHobbies-link {
-    left: 0;
-    top: 100px;
+    position: absolute;
+    top: 120px;
     font-size: 9px;
     border-radius: 5px;
     padding: 5px 5px;

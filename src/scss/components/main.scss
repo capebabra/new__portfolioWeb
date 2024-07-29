@@ -168,6 +168,7 @@
     .main__modalContainer{
         position: relative;
         display: none;
+        justify-content: center;
         
         .main__modalPage{
             position: relative;
@@ -356,9 +357,8 @@
             filter: blur(40px);
         }
         .main__modalContainer{
-            padding: 40px 0px;
-            display: flex;
             justify-content: center;
+            padding: 40px 0px;
             .main__modalPage{
                 margin: 0;
                 width: 350px;
@@ -448,7 +448,6 @@
         }
         .main__modalContainer{
             padding: 40px 25px;
-            display: flex;
             justify-content: center;
             .main__modalPage{
                 margin: 0;
@@ -700,7 +699,6 @@
             filter: blur(40px);
         }
         .main__modalContainer{
-            display: flex;
             flex-direction: column;
             align-items: center;
             .main__modalPage{

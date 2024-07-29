@@ -158,6 +158,7 @@
     }
 }
 
+
 @media (max-width:400px) { 
     
     .hobbies {
@@ -180,8 +181,9 @@
                 }
         
                 .contentHobbies-text {
+                    display:flex;
+                    flex-direction: column;
                     top: 4%; 
-                    left: 10px; 
     
                     .contentHobbies-textInfo {
                         gap: 10px;
@@ -197,8 +199,8 @@
     
                     }
                     .contentHobbies-link{
-                        left: 0;
-                        top: 100px;
+                        position: absolute;
+                        top: 120px;
                         font-size: 9px;
                         border-radius: 5px;
                         padding: 5px 5px;

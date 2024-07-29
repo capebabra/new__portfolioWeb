@@ -121,7 +121,7 @@ function openModal(layoutType) {
     mainContainer2.classList.add('modalBlur');
 
     console.log('Opening modal with:', layoutType)
-    modalMain.style.display = 'block'
+    modalMain.style.display = 'flex'
     const modalPage = document.querySelector('.modalPage__text')
     const modalImg = document.querySelector('.modalPage-imgContent')
     
