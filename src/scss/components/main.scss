@@ -166,8 +166,8 @@
         filter: blur(40px);
     }
     .main__modalContainer{
-        position: relative;
         display: none;
+        position: relative;
         justify-content: center;
         
         .main__modalPage{
@@ -609,7 +609,6 @@
             filter: blur(40px);
         }
         .main__modalContainer{
-            display: flex;
             flex-direction: column;
             align-items: center;
             .main__modalPage{

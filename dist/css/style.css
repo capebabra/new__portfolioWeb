@@ -508,8 +508,8 @@ a {
 }
 
 .main .main__modalContainer {
-  position: relative;
   display: none;
+  position: relative;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1190,9 +1190,6 @@ ul {
   }
 
   .main .main__modalContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1845,6 +1842,10 @@ ul {
 
   .main .main__container2 .container__textInfo .textContent-info {
     font-size: 28px;
+  }
+
+  .main .main__modalContainer {
+    display: none;
   }
 
   .main .main__modalContainer .main__modalPage {
