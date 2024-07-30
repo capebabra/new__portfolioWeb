@@ -1844,10 +1844,6 @@ ul {
     font-size: 28px;
   }
 
-  .main .main__modalContainer {
-    display: none;
-  }
-
   .main .main__modalContainer .main__modalPage {
     padding: 10px 20px;
     padding-bottom: 20px;
