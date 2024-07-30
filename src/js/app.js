@@ -110,6 +110,7 @@ modalExit.onclick = function() {
     mainContainer.classList.remove('modalBlur')
     mainContainer2.classList.remove('modalBlur')
 }
+const skillsContainer = document.querySelector('.skills')
 const modalMain = document.getElementById('modalMain')
 const mainContainer = document.querySelector('.main__container')
 const mainContainer2 = document.querySelector('.main__container2')
@@ -130,6 +131,7 @@ function openModal(layoutType) {
 }
 
 const skills = document.querySelector('.skills')
+const mainContentWrapper = document.getElementById('contentWrapper')
 
 skills.onclick = function(event) {
     const target = event.target.closest('label')
