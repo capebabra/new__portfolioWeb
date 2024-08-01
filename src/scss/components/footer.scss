@@ -61,6 +61,43 @@ img{
     }
 }
 
+
+@media (max-width:600px) {
+    .footer{
+        padding: 20px 20px;
+        .footer__container{
+            .container-logo{
+                .logo{
+                    border-radius: 10px;
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+            .container-navigation{
+                gap: 15px;
+                .container-navigationBar{
+
+                    gap: 10px;
+                    .navigation-elementF{
+                        font-size: 12px;
+                    }
+                }
+                .container-socials{
+                    gap: 20px;
+                    .socials-inst{
+                        width: 14px;
+                        height: 14px;
+                    }
+                    .socials-teleg{
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+            }
+        }
+    }    
+}
+
 @media (max-width:450px) {
     .footer{
         padding: 20px 20px;

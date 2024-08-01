@@ -159,6 +159,59 @@
 }
 
 
+@media (max-width:600px) { 
+    .hobbies {
+        padding: 20px 40px;
+        .hobbies__container {
+            gap: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .headingHobbies {
+                font-size: 21px;
+                padding-bottom: 20px;
+            }
+            .container-contentHobbiesImg {
+
+    
+                .contentHobbies-img {
+                    width: 100%;
+                    height: 160px;
+                }
+        
+                .contentHobbies-text {
+                    display:flex;
+                    flex-direction: column;
+                    top: 4%; 
+    
+                    .contentHobbies-textInfo {
+                        gap: 10px;
+                        width: 200px;
+    
+                        .contentHobbies-textHeading {
+                            font-size: 18px;
+                        }
+    
+                        .contentHobbies-textParagraph {
+                            font-size: 8px;
+                        }
+    
+                    }
+                    .contentHobbies-link{
+                        position: absolute;
+                        top: 120px;
+                        font-size: 9px;
+                        border-radius: 5px;
+                        padding: 5px 5px;
+                        width: 70px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    } 
+}
+
 @media (max-width:400px) { 
     .hobbies {
         padding: 20px 40px;

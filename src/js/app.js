@@ -143,7 +143,8 @@ skills.onclick = function(event) {
     const ulTarget = event.target.closest('ul')
     if (ulTarget) {
         const skillsUl = document.querySelectorAll('.contentSkillsImg')
-        let skillChecker = softSkills.checked ? 'soft' : 'hard'
+        const skillChecker = document.getElementById('soft').checked ? 'soft' : 'hard';
+        console.log(skillChecker)
         const translateSkillsLang = translationData["skillData"][skillChecker]
 
         translateSkillsLang.forEach((element, index) => {

@@ -2250,6 +2250,328 @@ ul {
   }
 }
 
+@media (max-width: 600px) {
+  .header {
+    padding: 20px 20px;
+  }
+
+  .header .header__container .container-logo {
+    width: 30px;
+    height: 45px;
+  }
+
+  .header .header__container .container-logo .logo {
+    border-radius: 10px;
+  }
+
+  .header .header__container .container-navigation {
+    gap: 20px;
+  }
+
+  .header .header__container .container-navigation .navigation-elementH {
+    font-size: 12px;
+  }
+
+  .header .header__container .container-navigation .navigation-select {
+    gap: 10px;
+  }
+
+  .header .header__container .container-navigation .navigation-select .select-choseElement {
+    margin-top: 40px;
+    z-index: 1000;
+  }
+
+  .header .header__container .container-navigation .navigation-select .select-choseElement .select-element {
+    border-radius: 5px;
+  }
+
+  .header .header__container .container-navigation .navigation-select .select-choseElement .select-element .navigation__selectContent {
+    padding: 8px 8px;
+    width: 70px;
+    cursor: pointer;
+  }
+
+  .header .header__container .container-navigation .navigation-select .select-choseElement .select-element .navigation__selectContent .selectImg {
+    width: 25px;
+  }
+
+  .header .header__container .container-navigation .navigation-select .select-choseElement .select-element .navigation__selectContent .selectText {
+    font-size: 12px;
+  }
+
+  .header .header__container .container-navigation .navigation-select .selected-element {
+    gap: 6px;
+    padding: 5px 6px;
+  }
+
+  .header .header__container .container-navigation .navigation-select .selected-element .selectedImg {
+    width: 15px;
+  }
+
+  .header .header__container .container-navigation .navigation-select .selected-element .selectedText {
+    font-size: 12px;
+  }
+
+  .main {
+    padding: 20px 20px;
+  }
+
+  .main .main__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 50px;
+    gap: 20px;
+  }
+
+  .main .main__container .container__textContent {
+    gap: 5px;
+    width: 95%;
+  }
+
+  .main .main__container .container__textContent .textContent-subheading {
+    font-size: 18px;
+  }
+
+  .main .main__container .container__textContent .textContent-heading {
+    font-size: 28px;
+  }
+
+  .main .main__container .container__textContent .textContent-paragraph {
+    font-size: 12px;
+  }
+
+  .main .main__container .container__textContent .textContent-link {
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 10px 5px;
+    width: 100px;
+  }
+
+  .main .main__container .container__imgContent {
+    width: 321px;
+    height: 320px;
+  }
+
+  .main .main__container2 {
+    padding: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+
+  .main .main__container2 .container__newimgContent {
+    padding-left: 0px;
+    width: 320px;
+  }
+
+  .main .main__container2 .container__textInfo {
+    gap: 10px;
+    width: 92%;
+    line-height: 20px;
+    font-size: 12px;
+  }
+
+  .main .main__container2 .container__textInfo .textContent-info {
+    font-size: 18px;
+  }
+
+  .main .modalBlur {
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+  }
+
+  .main .main__modalContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 40px 0px;
+  }
+
+  .main .main__modalContainer .main__modalPage {
+    margin: 0;
+    width: 350px;
+  }
+
+  .main .main__modalContainer .main__modalPage .modalExit .modalPage-exit {
+    font-size: 28px;
+  }
+
+  .main .main__modalContainer .main__modalPage .modalPage__wrapper {
+    gap: 10px;
+  }
+
+  .main .main__modalContainer .main__modalPage .modalPage__wrapper .modalPage-imgContent {
+    width: 95%;
+    height: 190px;
+  }
+
+  .main .main__modalContainer .main__modalPage .modalPage__wrapper .modalPage-textContent {
+    font-size: 12px;
+  }
+
+  .skills {
+    padding: 20px 40px;
+  }
+
+  .skills .skills__container {
+    gap: 30px;
+  }
+
+  .skills .skills__container .containerHeading {
+    padding-top: 20px;
+    font-size: 21px;
+  }
+
+  .skills .skills__container .container-headingSkills {
+    gap: 70px;
+  }
+
+  .skills .skills__container .container-headingSkills .headingSkillsSoft,
+  .skills .skills__container .container-headingSkills .headingSkillsHard {
+    font-size: 12px;
+  }
+
+  .skills .skills__container .container-contentSkillsImg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 30px;
+    padding-bottom: 20px;
+  }
+
+  .skills .skills__container .container-contentSkillsImg .contentSkillsImg {
+    gap: 10px;
+  }
+
+  .skills .skills__container .container-contentSkillsImg .contentSkillsImg .skillsImg {
+    width: 250px;
+    height: 300px;
+  }
+
+  .skills .skills__container .container-contentSkillsImg .contentSkillsImg .skillsText {
+    font-size: 18px;
+  }
+
+  .hobbies {
+    padding: 20px 40px;
+  }
+
+  .hobbies .hobbies__container {
+    gap: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .hobbies .hobbies__container .headingHobbies {
+    font-size: 21px;
+    padding-bottom: 20px;
+  }
+
+  .hobbies .hobbies__container .container-contentHobbiesImg .contentHobbies-img {
+    width: 100%;
+    height: 160px;
+  }
+
+  .hobbies .hobbies__container .container-contentHobbiesImg .contentHobbies-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 4%;
+  }
+
+  .hobbies .hobbies__container .container-contentHobbiesImg .contentHobbies-text .contentHobbies-textInfo {
+    gap: 10px;
+    width: 200px;
+  }
+
+  .hobbies .hobbies__container .container-contentHobbiesImg .contentHobbies-text .contentHobbies-textInfo .contentHobbies-textHeading {
+    font-size: 18px;
+  }
+
+  .hobbies .hobbies__container .container-contentHobbiesImg .contentHobbies-text .contentHobbies-textInfo .contentHobbies-textParagraph {
+    font-size: 8px;
+  }
+
+  .hobbies .hobbies__container .container-contentHobbiesImg .contentHobbies-text .contentHobbies-link {
+    position: absolute;
+    top: 120px;
+    font-size: 9px;
+    border-radius: 5px;
+    padding: 5px 5px;
+    width: 70px;
+    height: 20px;
+  }
+
+  .footer {
+    padding: 20px 20px;
+  }
+
+  .footer .footer__container .container-logo .logo {
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .footer .footer__container .container-navigation {
+    gap: 15px;
+  }
+
+  .footer .footer__container .container-navigation .container-navigationBar {
+    gap: 10px;
+  }
+
+  .footer .footer__container .container-navigation .container-navigationBar .navigation-elementF {
+    font-size: 12px;
+  }
+
+  .footer .footer__container .container-navigation .container-socials {
+    gap: 20px;
+  }
+
+  .footer .footer__container .container-navigation .container-socials .socials-inst {
+    width: 14px;
+    height: 14px;
+  }
+
+  .footer .footer__container .container-navigation .container-socials .socials-teleg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
 @media (max-width: 450px) {
   .header {
     padding: 20px 20px;

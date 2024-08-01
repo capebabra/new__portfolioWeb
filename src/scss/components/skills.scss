@@ -142,6 +142,49 @@
     }
 }
 
+@media (max-width:600px) {  
+    .skills {
+        padding: 20px 40px;
+    
+        .skills__container {
+            gap: 30px;
+    
+            .containerHeading {
+                padding-top: 20px;
+                font-size: 21px;
+            }
+    
+            .container-headingSkills {   
+                gap: 70px;
+                .headingSkillsSoft,
+                .headingSkillsHard {
+                    font-size: 12px;
+                }
+            }
+    
+            .container-contentSkillsImg {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30px;
+                padding-bottom: 20px;
+                .contentSkillsImg {
+                    gap: 10px;
+    
+                    .skillsImg {
+                        width: 250px;
+                        height: 300px;
+                    }
+    
+                    .skillsText {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width:400px) {  
     .skills {
         padding: 20px 40px;

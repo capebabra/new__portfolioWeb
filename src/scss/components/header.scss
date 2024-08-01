@@ -142,6 +142,61 @@ a{
     }
 }
 
+@media (max-width:600px) {  
+    .header{
+        padding: 20px 20px;
+        .header__container{
+            .container-logo{
+                width: 30px;
+                height: 45px;
+                .logo{
+                    border-radius: 10px;
+                }
+            }
+            .container-navigation{
+                gap: 20px;
+                .navigation-elementH{
+                    font-size: 12px;
+                }
+                .navigation-select{
+                    gap: 10px;
+                    .select-choseElement{
+                        margin-top: 40px;
+                        z-index: 1000;
+                        .select-element{
+                            border-radius: 5px;
+                            .navigation__selectContent{
+                                padding: 8px 8px;
+                                width: 70px;
+                                cursor: pointer;
+                                .selectImg{
+                                    width: 25px;
+                                }
+                                .selectText{
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+    
+                    }
+                    .selected-element{
+                        gap: 6px;
+                        padding: 5px 6px;
+                        .selectedImg{
+                            width: 15px;
+    
+                        }
+                        .selectedText{
+                            font-size: 12px;    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 @media (max-width:400px) {  
     .header{
         padding: 20px 20px;
